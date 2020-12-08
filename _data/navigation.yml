@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: https://shjustinbaek.github.io/resume
   - title: "Notes"
-    url: /Notes/
+    url: /Notes
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

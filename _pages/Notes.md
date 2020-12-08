@@ -1,9 +1,9 @@
 ---
 title:  "Notes"
-layout: archive
+layout: tags
 permalink: /Notes/
 author_profile: true
 comments: true
 ---
 
-This is where i keep my notes.
+Notes Organized by tags.
