@@ -8,11 +8,14 @@ mathjax: true
 
 ​	This chapter is about *linear regression*, a very simple approach for supervised learning.  
 
-Linear regression is useful for predicting a quantitative response. 
+Linear regression is useful for predicting a quantitative response. $$X+Y+TEST$$
 
 ![File:Logo-Test.png - Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png)
 
-* Linear regression is an old technique, and it may seem dull. However, it is still useful and widely used. 
+![image](https://user-images.githubusercontent.com/46898478/101401388-a0373080-3915-11eb-8c17-25d71e6be8b0.png)
+
+
+Linear regression is an old technique, and it may seem dull. However, it is still useful and widely used. 
 * Many fancy statistical learning approaches are generalizations or extensions of linear regression. Therefore, it is important to understand linear regression.
 
 ---
@@ -57,7 +60,7 @@ Our goal is to obtain coefficient estimates $$\hat{\beta0},\hat{\beta1}$$ such t
 
 that is: $$y_i \approx \hat{\beta_0} + \hat{\beta_1} X$$ for $$ i= 1,2,...,n$$. 
 
-In other words, find an intercept $$\hat{\beta_0}$$ and a slope $$\hat{\beta_1}$$ such that the resulting line is as *close* as possible to the $$n$$ data points.
+In other words, find an intercept $\hat{\beta_0}$ and a slope $$\hat{\beta_1}$$ such that the resulting line is as *close* as possible to the $$n$$ data points.
 
 There are many approaches to measure *closeness*. 
 
