@@ -5,7 +5,6 @@ date:   2020-12-08
 mathjax: true
 tags: DataScience LinearRegression
 toc: true
-classes: wide
 ---
 # Linear Regression
 
