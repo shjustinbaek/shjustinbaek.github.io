@@ -1,7 +1,7 @@
 ---
-title:  "Notes"
+title:  "By Tags"
 layout: tags
-permalink: /Notes/
+permalink: /Tags/
 author_profile: true
 comments: true
 ---

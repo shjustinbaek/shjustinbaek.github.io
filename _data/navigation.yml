@@ -2,8 +2,10 @@
 main:
   - title: "About"
     url: https://shjustinbaek.github.io/resume
-  - title: "Notes"
-    url: /Notes
+  - title: "By Categories"
+    url: /Categories
+  - title: "By Tags"
+    url: /Tags
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
