@@ -7,13 +7,11 @@ tags: ML xai ebm gam ga2m ExplainableBoostingMachine
 categories: ML
 toc: true
 ---
-# 설명가능한 부스팅 모델 Explainable Boosting Machine
+
 >설명하기 어려운 XGBoost, LightGBM, RandomForest와 대등한 성능을 가지면서, 설명 가능한 Explainable Boosting Machine의 원리, API 사용 방법, 활용 사례에 대해 알아보자.
 
-<br>
+
 ## accuracy vs interpretability trade-off
-<hr/>
-<br>
 ![img](https://miro.medium.com/max/978/1*SI3wAOvfTQrLl5NXQHwuxA.png)
 
 머신러닝에서 모델의 예측 정확도와 설명 가능성이 trade-off 관계를 보인다는 것은 정설처럼 받아들여졌다.
@@ -29,8 +27,6 @@ toc: true
 
 <br>
 ## Explainable Boosting Machine (EBM)
-<hr/>
-<br>
 그러나, 마이크로소프트의 interpretML 패키지에 포함된 Explainable Boosting Machine(EBM)은 우수한 예측 성능과 설명 가능성 두마리 토끼를 모두 잡은 것처럼 보인다.
 
 ![image-20210621230204530](https://user-images.githubusercontent.com/46898478/125193853-9bf73b00-e289-11eb-9538-3133d7c84f2d.png)
@@ -70,8 +66,6 @@ EBM은 높은 설명 가능성을 가지고 있음에도 불구하고, LightGBM,
 
 <br>
 ## EBM 모델 구조
-<hr/>
-<br>
 EBM은 Generalized Additive Model (GAM)의 발전된 형태인 GA2M 모델에 속하는 알고리즘이다.
 조금 더 자세히 설명하자면, FAST알고리즘으로 pairwise feature interaction term을 선택하는 GA2M 알고리즘이다.
 
@@ -109,7 +103,6 @@ GAM의 형태는 Generalized Linear Model처럼 각 feature에 대한 연산값�
 하지만, GAM은 feature $x_i,x_k$의 pairwise interaction을 모델에 포함할 수 없다는 한계점 있다.
 
 <br>
-
 **Generalized Additive Model plus Interactions (GA2M)**
 <br>
 
@@ -140,9 +133,6 @@ Explainable Boosting Machine (EBM)은 현대적인 머신러닝 기법(gradient 
 
 <br>
 ## EBM 학습 과정
-<hr/>
-<br>
-
 Explainable Boosting Machine은 2 단계의 과정을 거치며 학습을 진행한다.
 
 1. gradient boosting으로 pairwise interaction을 고려하지 않은 $f_i$ 학습
@@ -211,8 +201,6 @@ $T_{i,j}$ 학습은 모든 $(c_i, c_j) $조합을 모두 탐색하여 $RSS = \Si
 
 <br>
 ## 코드 예제
-<hr/>
-<br>
 interpretML은 scikit-learn 스타일의 API를 제공하기 때문에, 익숙한 .fit() .predict() method로 간편하게 모델 학습 및 예측을 진행할 수 있습니다.
 
 아래 코드 예제는 interpretML EBM documentation에서 가져왔습니다.
@@ -292,8 +280,6 @@ EBM Classifier에서 모델의 예측 positive class 확률은 위 그림에서 
 
 <br>
 ## EBM을 활용한 모델 디버깅 사례
-<hr/>
-<br>
 ![image-20210622034023296](https://user-images.githubusercontent.com/46898478/125193968-2d66ad00-e28a-11eb-8e0c-f5424b1a0524.png)
 간략하게 EBM을 디버깅한 사례를 소개하고 글을 마무리하겠습니다.
 
@@ -311,7 +297,6 @@ EBM Classifier에서 모델의 예측 positive class 확률은 위 그림에서 
 
 <br>
 ## 참고 자료
-<br>
 - 
 [InterpretML documentation](https://interpret.ml/docs/ebm.html?fbclid=IwAR0P7TwfiWMBpbY1EU7YhDrtjM4wPbpiV-qh211mMoaTK9O4q3bxTSk8VXI#id7)
 - [Yin Lou, Rich Caruana, Johannes Gehrke, and Giles Hooker. Accurate intelligible models with pairwise interactions. In *Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining*, 623–631. 2013.](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd13.pdf)
