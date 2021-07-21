@@ -12,6 +12,11 @@
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+
+    {% if page.mathjax %}
+      {% include mathjax_support.html %}
+    {% endif %}
+    
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
@@ -35,8 +40,6 @@
         {% include_cached footer.html %}
       </footer>
     </div>
-
-    {% include scripts.html %}
 
   </body>
 </html>
